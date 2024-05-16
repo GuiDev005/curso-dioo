@@ -43,7 +43,7 @@ while True:
 
     elif opcao_operacao == 'B' or opcao_operacao == 'b':
 
-        if not extrato == 0:
+        if not extrato == 0 and not controle_saque == 0:
             while not controle_saque == 0 and saida_saque == 2:
 
                 print('----Tela de Saque----')
@@ -71,11 +71,11 @@ while True:
                         print('Opção inválida! tente novamente!')
                         saida_saque = int(input('Digite 1 para retornar.'))
 
-        if controle_saque == 0:
+        elif controle_saque == 0:
             print('Atingiu o máximo de saques diários, volte amanhã!')
             voltar = int(input('Digite 1 para voltar:'))
 
-        else:
+        elif extrato == 0:
             print('Seu saldo está vazio! Faça um deposito primeiro.')
             opcao_operacao = input('''SELECIONE UMA DAS OPÇÕES ABAIXO:
             [A] VOLTAR
